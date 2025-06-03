@@ -12,5 +12,12 @@ def mask_accoud_card(info: str) -> str:
     return f"{type_info} {masked_number}"
 
 
-def get_date():
-    pass
+def get_date(user_data: str) -> str:
+    """Функция переформатирует дату"""
+    data_user = user_data.split("T")
+    data = "".join(data_user[0])
+    data_format = data.split("-")
+    day = data_format[2]
+    month = data_format[1]
+    year = data_format[0]
+    return f'"{day}.{month}.{year}"'
