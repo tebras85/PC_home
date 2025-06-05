@@ -1,3 +1,6 @@
+from src.masks import get_mask_account, get_mask_card_number
+
+
 def mask_accoud_card(info: str) -> str:
     """обрабатывает информацию о картах и счетах, выводит замаскированный номер"""
     parts = info.split()
@@ -5,9 +8,9 @@ def mask_accoud_card(info: str) -> str:
     number = parts[-1]
 
     if parts[0].lower() in "счет":
-        masked_number = "**" + number[-4:]
+        masked_number = masked_number = get_mask_account(number)
     else:
-        masked_number = number[:4] + " " + number[4:6] + "** **** " + number[-4:]
+        masked_number = get_mask_card_number(number)
 
     return f"{type_info} {masked_number}"
 
