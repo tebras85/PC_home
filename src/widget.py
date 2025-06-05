@@ -8,7 +8,7 @@ def mask_accoud_card(info: str) -> str:
     number = parts[-1]
 
     if parts[0].lower() in "счет":
-        masked_number = masked_number = get_mask_account(number)
+        masked_number = get_mask_account(number)
     else:
         masked_number = get_mask_card_number(number)
 
@@ -24,3 +24,4 @@ def get_date(user_data: str) -> str:
     month = data_format[1]
     year = data_format[0]
     return f'"{day}.{month}.{year}"'
+
