@@ -24,4 +24,3 @@ def get_date(user_data: str) -> str:
     month = data_format[1]
     year = data_format[0]
     return f'"{day}.{month}.{year}"'
-
