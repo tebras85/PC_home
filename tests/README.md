@@ -5,7 +5,7 @@
 ## Установка:
 1. Клонируйте репозиторий
  ```
-   git clone 
+   git clone git@github.com:tebras85/PC_home.git
  ```
 
 2. Установите зависимости
