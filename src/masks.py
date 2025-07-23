@@ -2,10 +2,11 @@ def get_mask_card_number(card_number: str) -> str:
     """
     Делаем маску номера карты , скрывая некоторые цифры номера карты.
     """
-
-    formatted_number = card_number[:4] + " " + card_number[4:6] + "** ****" + " " + card_number[-4:]
-    return formatted_number
-
+    if len(card_number) < 16 or len(card_number) > 16:
+        return 'Не коректный вод карты!!! '
+    #formatted_number = card_number[:4] + " " + card_number[4:6] + "** ****" + " " + card_number[-4:]
+    #return formatted_number
+    return card_number[:4] + " " + card_number[4:6] + "** ****" + " " + card_number[-4:]
 
 def get_mask_account(card_account: str) -> str:
     """
