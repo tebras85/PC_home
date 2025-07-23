@@ -3,10 +3,7 @@ def get_mask_card_number(card_number: str) -> str:
     Делаем маску номера карты , скрывая некоторые цифры номера карты.
     """
 
-    mask_card_number = card_number.replace(card_number[7:12], "******")
-    formatted_number = (
-        mask_card_number[:4] + " " + mask_card_number[5:9] + " " + mask_card_number[8:12] + " " + mask_card_number[-4:]
-    )
+    formatted_number = card_number[:4] + " " + card_number[4:6] + "** ****" + " " + card_number[-4:]
     return formatted_number
 
 
