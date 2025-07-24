@@ -20,8 +20,8 @@ def test_mask_accoud_card(card_number: str, expected: str)-> str:
     assert mask_accoud_card(card_number) == expected
 
 
-@pytest.mark.parametrize(
-    "card_number", [("111222233334444"),
+@pytest.mark.parametrize("card_number",
+                         [("111222233334444"),
                      ("70007922896067450"),
                      ("722079228960679"),
                      ("32432")]
