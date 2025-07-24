@@ -6,6 +6,9 @@ from src.masks import get_mask_card_number, get_mask_account
                                                      ('7220792289606798', '7220 79** **** 6798')
                                                      ])
 def test_masks(card_number, expected):
+    '''
+    тест корректности маскировки карты
+    '''
     assert get_mask_card_number(card_number) == expected
 
 @pytest.mark.parametrize ('card_number,' , [('70007922896063610'),
@@ -15,6 +18,9 @@ def test_masks(card_number, expected):
                                             ])
 
 def test_masks_type(card_number):
+    '''
+    тест корректности ввода номера карты 16 символов
+    '''
     assert get_mask_card_number(card_number) ==  'не корректно введены данные!!!'
 
 
@@ -24,7 +30,13 @@ def test_masks_type(card_number):
                                                      ])
 
 def test_get_mask_account(account, expected):
+    '''
+    тест корректности маскировки счета
+    '''
     assert get_mask_account(account) == expected
 
 def test_get_mask_account_zero():
+    '''
+    тест на пустую строку
+    '''
     assert get_mask_card_number('') ==  'не корректно введены данные!!!'
