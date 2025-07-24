@@ -15,6 +15,8 @@ def mask_accoud_card(info: str) -> str:
     return f"{type_info} {masked_number}"
 
 
+
+
 def get_date(user_data: str) -> str:
     """Функция переформатирует дату"""
     data_user = user_data.split("T")
@@ -29,6 +31,6 @@ def get_date(user_data: str) -> str:
 if __name__ == '__main__':
 
     print(mask_accoud_card("Visa Platinum 7000792289606361"))
-    print(mask_accoud_card('Visa Platinum 1111222233334444'))
-    print(mask_accoud_card("Счет 73654108430135874305"))
+    print(mask_accoud_card('Visa Platinum 233334444'))
+    print(mask_accoud_card("Счет 654108430135874305"))
     #print(get_mask_account(''))
