@@ -1,6 +1,6 @@
 import pytest
 
-from src.widget import get_mask_account, mask_accoud_card
+from src.widget import get_date, mask_accoud_card
 
 
 @pytest.mark.parametrize(
@@ -21,16 +21,22 @@ def test_mask_accoud_card(card_number: str, expected: str)-> str:
 
 
 @pytest.mark.parametrize(
-    "card_number,", [("111222233334444"),
+    "card_number", [("111222233334444"),
                      ("70007922896067450"),
                      ("722079228960679"),
-                     ("32")]
+                     ("32432")]
 )
 def test_mask_accoud_card_n(card_number):
     """
     тест корректности ввода номера карты 16 символов
     """
     assert mask_accoud_card(card_number) == ' не корректно введены данные!!!'
+
+@pytest.mark.parametrize('data, expected' ,[("2024-03-11T02:26:18.671407","11.03.2024"),
+                                              ("2023-03-11T02:26:18.671407","11.03.2023")])
+
+def test_get_date(data: str ,expected: str)-> str:
+    assert get_date(data) == expected
 
 
 
