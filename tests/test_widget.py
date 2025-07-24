@@ -33,9 +33,13 @@ def test_mask_accoud_card_n(card_number):
     assert mask_accoud_card(card_number) == ' не корректно введены данные!!!'
 
 @pytest.mark.parametrize('data, expected' ,[("2024-03-11T02:26:18.671407","11.03.2024"),
-                                              ("2023-03-11T02:26:18.671407","11.03.2023")])
+                                              ("2023-03-11T02:26:18.671407","11.03.2023"),
+                                            ("2025-04-11T02:26:00.671407","11.04.2025")])
 
 def test_get_date(data: str ,expected: str)-> str:
+    '''
+    тест корректности даты
+    '''
     assert get_date(data) == expected
 
 
