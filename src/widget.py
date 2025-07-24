@@ -24,3 +24,11 @@ def get_date(user_data: str) -> str:
     month = data_format[1]
     year = data_format[0]
     return f'"{day}.{month}.{year}"'
+
+
+if __name__ == '__main__':
+
+    print(mask_accoud_card("Visa Platinum 7000792289606361"))
+    print(mask_accoud_card('Visa Platinum 1111222233334444'))
+    print(mask_accoud_card("Счет 73654108430135874305"))
+    #print(get_mask_account(''))
