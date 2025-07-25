@@ -37,8 +37,14 @@ def test_get_mask_account(account: str, expected: str) -> str:
     assert get_mask_account(account) == expected
 
 
-def test_get_mask_account_zero() -> str:
+def test_get_mask_account_zero(mask_acc_zero) -> str:
     """
     тест на пустую строку
     """
-    assert get_mask_card_number("") == "не корректно введены данные!!!"
+    assert get_mask_card_number("") == mask_acc_zero
+
+
+def test_get_mask_account(mask_acc):
+    assert get_mask_account('346876754444') == mask_acc
+
+
