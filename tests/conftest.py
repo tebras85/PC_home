@@ -7,3 +7,8 @@ def mask_acc():
 @pytest.fixture
 def mask_acc_zero():
     return "не корректно введены данные!!!"
+
+@pytest.fixture
+def date_no():
+    return "нет даты!!!"
+

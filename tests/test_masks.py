@@ -18,7 +18,7 @@ def test_masks(card_number: str, expected: str) -> str:
     assert get_mask_card_number(card_number) == expected
 
 
-@pytest.mark.parametrize("card_number,", [("70007922896063610"), ("70007922896067450"), ("722079228960679"), ("32")])
+@pytest.mark.parametrize("card_number,", [(""), ("70007922896067450"), ("722079228960679"), ("32")])
 def test_masks_type(card_number: str) -> str:
     """
     тест корректности ввода номера карты 16 символов

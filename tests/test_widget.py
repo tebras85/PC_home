@@ -41,3 +41,7 @@ def test_get_date(data: str, expected: str) -> str:
     тест корректности даты
     """
     assert get_date(data) == expected
+
+
+def test_get_date(date_no):
+    assert get_date('') == date_no
