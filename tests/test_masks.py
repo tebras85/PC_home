@@ -45,6 +45,4 @@ def test_get_mask_account_zero(mask_acc_zero) -> str:
 
 
 def test_get_mask_account(mask_acc):
-    assert get_mask_account('346876754444') == mask_acc
-
-
+    assert get_mask_account("346876754444") == mask_acc
