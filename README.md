@@ -17,3 +17,4 @@ pip install -r requirements.txt
 ```
    pip install requests
 ```
+4. Добавлены тесты для каждой функции в пакет tests
